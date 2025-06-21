@@ -1,0 +1,55 @@
+<div [ngClass]="themeClass()">
+  <div class="movie-toolbar">
+    <h1 class="header">Movies</h1>
+
+    <div class="filters">
+      <select [value]="selectedSort()" (change)="onSortChange($event)">
+        <option *ngFor="let option of sortOptions" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+
+      <input
+        type="text"
+        placeholder="Search for a movie..."
+        (input)="onSearchChange($event)"
+        [value]="searchTerm()"
+      />
+    </div>
+      <button class="theme-toggle" (click)="toggleTheme()">🌓</button>
+  </div>
+
+    <div class="grid">
+  <div class="card" *ngFor="let movie of paginatedMovies()"> 
+    <ng-container *ngIf="movie.backdrop_path">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path" alt="poster">
+      <h4>{{ movie.title }}</h4>
+      <p>{{ movie.release_date }}</p>
+    </ng-container>
+  </div>
+</div>
+
+</div>
+
+<div class="pagination">
+  <button
+    *ngFor="let page of pages"
+    (click)="goToPage(page)"
+    [class.active]="currentPage() === page"
+  >
+    {{ page }}
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,195 @@
+.grid {
+    display: grid;
+  grid-template-columns: repeat(6, 1fr); /* ✅ exactly 6 columns */
+    gap: 1rem;
+    padding: 1rem;
+  }
+.card {
+  background-color: inherit;
+  color: inherit;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  height: 100%; /* makes it fill the grid cell */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card img {
+  width: 100%;
+  height: 320px; 
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+
+.movie-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+select,
+input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.dark-theme,
+.light-theme {
+  min-height: 100vh;
+  padding: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme select,
+.dark-theme input,
+.light-theme select,
+.light-theme input {
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid #444;
+}
+
+.theme-toggle {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.dark-theme .theme-toggle {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .theme-toggle {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+
+.dark-theme .header {
+  color: #ffffff;
+}
+
+select option {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.pagination button.active {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-theme .pagination button {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .pagination button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.pagination button.active {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-theme .pagination button {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .pagination button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+
